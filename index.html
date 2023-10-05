@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewellery ecommerce</title>
+     <link rel="stylesheet" href="stylejew.css">
+     <style>
+        *{margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'spartan',sans-serif;
+  }
+  h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+  }
+  h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+  }
+  h4{
+    font-size: 20px;
+    color: #222;
+  }
+  h6{
+    font-weight: 700;
+    font-size: 12px;
+  }
+  h5{
+    color: #242424;
+    padding: 20px;
+  }
+p{
+    color: #465b52;
+    margin: 15px 0 20px 0;
+    font-size: 16px;
+}  
+.section-p1{
+    padding: 150px 80px;
+}
+.section-m1{
+    margin: 40px 0;
+}
+button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color:#000;
+    background-color: #fff; 
+    border-radius: 4px;
+    cursor: pointer;
+    border:none; 
+    outline: none;
+    transition: 0.02s;
+
+}
+body{
+    width: 100%;
+}
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color:#E3E6F3 ;
+    box-shadow: 0 5px 15px rgba(0, 0 , 0, 0.06) ;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.navbar{
+   margin-bottom: 50px;
+}
+.logo
+            {
+                margin-left: 70px;
+                margin-top: 10px;
+                height: 40px;
+                width: 20px;
+            }
+            nav
+            {
+                background-color: white;
+                width: 100%;
+            }
+            #menu-bar
+            {
+                display: none;
+            }
+            label
+            {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+            }
+            nav ul
+            {
+                display: none;
+            }
+            nav ul li
+            {
+                list-style-type: none;
+            }
+            nav ul li a
+            {
+                text-decoration: none;
+                color: #1a1a1a;
+               
+            }
+            nav li
+            {
+                color:  #1a1a1a;
+                list-style-type: none;
+                font-size:larger;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                display: block;
+                width: 50%;
+                padding: 10px 20px;
+                margin-top: 30px;
+                margin-left: 5px;
+            }
+            nav li:hover
+            {
+                color: #088178;
+                border-radius: 2px;
+                cursor: pointer;
+            }
+            .submenu{
+		background: #fff;
+		width: 250px;
+        border-radius: 5px;
+        padding: 5px;
+		box-shadow: 2px 2px 15px #aaaaaa33;
+		display: none;
+	}
+    a
+    {
+        text-decoration: none;
+        color:  #088178;
+    }
+	.submenu li
+    {
+        color:  #088178;
+        width: 100%;
+        top: 0px;
+        padding: 2px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: lighter;
+	}
+    .submenu a:hover
+    {
+        color:  20px 20px 34px rgba(0, 0 , 0, 0.03);
+    }
+    .submenu li:hover
+    {
+        background-color: transparent;
+    }
+	.submenu-hover:hover .submenu{
+		display: block;
+
+	}
+    #menu-bar:checked ~ ul 
+            {
+                display: initial;
+            }
+            @media only screen and (min-width:800px)
+            {
+                nav {background-color: white;}
+                label{display: none;}
+                .logo{margin-top: 10px;
+                margin-left: 10px;
+            height: 100px;
+        width: 80px;}
+                nav ul
+                {
+                    display: inline-flex;
+                }
+            nav ul li
+            {
+                list-style-type: none;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                padding: 0px 10px;
+            }
+            nav ul 
+            {
+                position: absolute;
+                top: 0px;
+                right: 10px;
+            }
+            .submenu
+            {
+                position: absolute;
+                top: 50px;
+                left: 90px;
+                z-index: 3;
+            }
+            .active
+            {
+                text-decoration: underline;
+                color:  #088178;
+            }
+            .submenu li:hover
+            {
+                text-decoration: none;
+            }
+            nav ul li:hover
+            {
+                text-decoration: underline;
+                color:  #088178;
+            }
+            }
+
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  display: grid;
+  grid: auto  ;
+  grid-gap: ;
+  justify-content: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;                   
+}
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+#feature{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            align-items: center;
+            justify-content: space-between;
+           
+        }
+#feature .fe-box{
+            width: 300px;
+            text-align: center;
+            padding: 25px 15px;
+            box-shadow: 20px 20px 34px rgba(0, 0 , 0, 0.03);
+            border: 1px solid #cce7de;
+            border-radius:4px;
+            margin:15px 0;
+         
+        }
+#feature .fe-box:hover{
+            transform: scale(1.1);
+            box-shadow: 10px 10px 54px rgba(0, 0 , 0, 0.03);
+        }
+#feature .fe-box img{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+#feature .fe-box h6{
+            display: inline-block;
+            padding: 9px 8px 6px 8px;
+            line-height: 1;
+            border-radius: 4px;
+            color: #088178;
+            background-color: #fddde4;
+        }
+.section-p1
+{
+    margin-top: 10px;
+}
+.section-p1 h2{
+    text-align: center;
+    padding: 85px 15px;
+} 
+#product1{
+    text-align: center;
+    
+}
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+#product1 .pro{
+ width: 23%;
+ min-width: 250px;
+ padding: 10px 12px;
+ border:1px #cce7d0;
+ border-radius: 25px;
+ cursor: pointer;
+ box-shadow: 20px 20px 20px rgba(0, 0 , 0, 0.02);
+ margin: 15px 0;
+ transition: 0.2s ease;
+ position: relative;
+ grid: auto;
+}
+#product1 .pro:hover{
+    box-shadow: 20px 20px 20px rgba(0, 0 , 0, 0.10);  
+
+}
+#product1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+#product1 .pro .des{
+text-align: start;
+padding: 10px 0;
+}
+#product1 .pro .des span{
+    color: #606063;
+    font-size: 12px;
+}
+#product1 .pro .des h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+#product1 .pro .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(pexels-sreejith-rajamani-3594582-01.jpg);
+    width: 100%;
+    height: 60vh;
+    background-size:cover;
+    background-position:center ;
+    grid:auto;
+}
+#banner button:hover{
+    background: #088178;
+    color: #fff;
+    grid:auto ;
+}
+#banner h2 span{
+    color: AD1212;
+    grid:auto ;
+}  
+
+
+#banner h4{
+    color:#0f0f0f;
+    font-size: 16px;   
+    padding: 10px 0;
+    grid:auto ;
+}
+#banner h2{
+    color:#0f0f0f;
+    font-size: 30px;   
+    grid:auto;
+}
+
+.active {
+  background-color: #717171;
+}
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+
+@media (min-width: 300px) {
+  .grid-container{
+    display: grid;
+  grid-template-columns: auto;
+  }
+ }
+@media (min-width: 600px) {
+  .grid-container{
+    display: grid;
+  grid-template-columns: auto auto;}
+
+
+}
+@media (min-width: 950px) {
+  .grid-container{
+    display: grid;
+  grid-template-columns: auto auto auto auto;}
+
+}
+
+
+#list-items{
+            display: inline-flex;
+		float: right;
+    }
+    #list-options{
+        align-items: center;
+        padding-right: 100px;
+        padding-top:10px ;
+        padding-bottom:10px ;
+        grid:auto;
+    }
+    #footerpage{
+        background-color:#E3E6F3;
+        
+    }
+    #bottomlist{
+         display: inline-flex;
+         padding-top: 200px;
+   }
+   #bottomlisti{
+    align-items: center;
+        padding-right: 100px;
+   }
+   h2,h6,p{
+    color: rgb(12, 5, 5);
+    font-family: Arial, Helvetica, sans-serif;
+   }
+   h2{
+    padding-top: 100px;
+   }
+    p{
+        font-size: 12px;
+        padding-bottom: 15px;
+    }
+    .grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 350px;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  grid:auto auto auto auto;
+}
+
+.grid-container > div {
+  background-color: transparent;
+  text-align: center;
+  font-size: 14px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(0, 0, 0);
+  padding: 40px;
+  grid:auto auto auto auto;
+}
+
+.logo{
+    margin-bottom: 10px;
+    padding: 20px 0 20px 50px;
+}
+.footer-images{
+   display: inline-flex;
+
+}
+.last-line{
+    display: inline-flex; 
+    
+}
+.last-line>p{
+   padding-right: 20px;
+   
+}
+.top-logo{
+    margin: 0%;
+}
+
+</style>
+     </style>
+</head>
+<body>
+    
+    
+    <section class="navbar">
+        <nav>
+            <div class="logo"> <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\website\1.(portfolio)ecommerce website\GIVA-logo-black.png"   height="60px"  width="100px" alt=""></div>
+            <input type="checkbox" id="menu-bar">
+            <label for="menu-bar"><img src="hamburger.png" alt="" height="50px" width="50px"></label>
+            <ul>
+                <li >Home</li>
+                <li class="submenu-hover">
+                    <a href="#">ShopAll</a>
+                    <ul class="submenu">
+                        <li><a  href="home.html">Rings</a></li>
+                        <li><a href="Shop.html">Necklaces & Pendents</a></li>
+                        <li><a href="Gold.html">Chains</a></li>
+                        <li><a href="Diamond.html">Nose Pins & Rings</a></li>
+                        <li><a href="Platinum.html">Rose Gole Siver</a></li>
+                        <li><a href="Collection.html">Clodised Silver</a></li>
+                        <li><a href="More.html">14K Gold</a></li>
+                    </ul>
+                </li>
+                <li>Gold</li>
+                <li>Platinum</li>
+                <li>Diamond</li>
+                <li>Collection</li>
+                <li>More </li>
+            </ul>
+        </nav>
+    </section>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\website\1.(portfolio)ecommerce website\jwe m 1.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\website\1.(portfolio)ecommerce website\jwe m 2.jpg" style="width:100%">
+        
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\website\1.(portfolio)ecommerce website\jwe m 4.jpg" style="width:100%">
+       
+        </div>
+        
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+          </div>
+        <script>
+            let slideIndex = 0;
+            showSlides(); 
+            
+            function showSlides() {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+            </script>
+    </div>  
+</section>
+      
+<section class="section-p1">
+    <h2>Essentials For You</h2>
+    <div id="feature" >
+   
+            <div class="fe-box">
+            <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\office wear.jpg" alt="" width="100px">
+            <h4>Office Wear</h4>
+        </div>
+        <div class="fe-box">
+            <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\Gift.jpg" alt="" width="100px">
+            <h4>Gifting Wear</h4>
+        </div>
+        <div class="fe-box">
+            <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\Accessories.jpg" alt="" width="100px">
+            <h4>Accessories</h4>
+        </div>      <div class="fe-box">
+            <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\party wear.jpg" alt="" width="100px">
+            <h4>Party Wear</h4>
+        </div>
+    </div>
+        </section>
+        
+       
+       
+
+  
+        <section id="product1" class="section-p1">
+            <h2>Feature Products</h2>
+            <h3>Our Collection<h3>
+            <div class="pro-container">
+                <div class="pro">
+                    <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\website\1.(portfolio)ecommerce website\pexels-the-glorious-studio-8891950.jpg"  alt="" width="200px">
+                    <div class="des">
+                        <span>Braslet</span>
+                        <h5>Men's Braslet Collection</h5>
+                       <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                       </div>
+                        <h4>₹2499</h4>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="pro">
+                    <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\website\1.(portfolio)ecommerce website\pexels-the-glorious-studio-8891952.jpg"  alt="" width="200px">
+                    <div class="des">
+                        <span>Necklace</span>
+                        <h5>Necklace Set Collection</h5>
+                       <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                       </div>
+                        <h4>₹11299</h4>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="pro">
+                    <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\website\1.(portfolio)ecommerce website\pexels-the-glorious-studio-8891951.jpg"  alt="" width="200px">
+                    <div class="des">
+                        <span>Ring</span>
+                        <h5>Women's Ring Collection</h5>
+                       <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                       </div>
+                        <h4>₹3499</h4>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="pro">
+                    <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\website\1.(portfolio)ecommerce website\pexels-the-glorious-studio-8891953.jpg"  alt="" width="200px">
+                    <div class="des">
+                        <span>Necklace</span>
+                        <h5>Necklace Set Collection</h5>
+                       <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                       </div>
+                        <h4>₹16999</h4>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="pro">
+                    <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\website\1.(portfolio)ecommerce website\pexels-the-glorious-studio-10983778.jpg"  alt="" width="200px">
+                    <div class="des">
+                        <span>Earring</span>
+                        <h5>EarRing Collection</h5>
+                       <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                       </div>
+                        <h4>₹4399</h4>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="pro">
+                    <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\website\1.(portfolio)ecommerce website\pexels-the-glorious-studio-10983782.jpg"  alt="" width="200px">
+                    <div class="des">
+                        <span>Pendants</span>
+                        <h5>Women's Pendants Collection</h5>  
+                       <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                       </div>
+                        <h4>₹12499</h4>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="pro">
+                    <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\website\1.(portfolio)ecommerce website\pexels-the-glorious-studio-10983783.jpg"  alt="" width="200px">
+                    <div class="des">
+                        <span>Earring</span>
+                        <h5>EarRing Collection</h5>
+                       <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                       </div>
+                        <h4>₹6499</h4>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="pro">
+                    <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\website\1.(portfolio)ecommerce website\pexels-the-glorious-studio-10983785.jpg"  alt="" width="200px">
+                    <div class="des">
+                        <span>Pendants</span>
+                        <h5>Women's Pendants Collection</h5>
+                       <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                       </div>
+                        <h4>₹14499</h4>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="banner" class=".section-m1">
+            <h4>Explore More Collections</h4>
+            <h2>Upto <span>20% Off*</span>
+                on making charges of gold jewellery or on diamond jewellery value</h2>
+                <button class="normal">Explore More</button>
+        </section>
+        <section id="product1" class="section-p1">
+            <h2>New Arrivals</h2>
+            <h3>Our Men's Collection<h3>
+            <div class="pro-container">
+                <div class="pro">
+                    <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\website\1.(portfolio)ecommerce website\pexels-the-glorious-studio-12026050.jpg"  alt="" width="200px">
+                    <div class="des">
+                        <span>Braslet</span>
+                        <h5>Men's Braslet Collection</h5>
+                       <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                       </div>
+                        <h4>₹12000</h4>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="pro">
+                    <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\website\1.(portfolio)ecommerce website\pexels-the-glorious-studio-12026054.jpg"  alt="" width="200px">
+                    <div class="des">
+                        <span>Braslet</span>
+                        <h5>Men's Braslet Collection</h5>
+                       <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                       </div>
+                        <h4>₹11299</h4>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="pro">
+                    <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\website\1.(portfolio)ecommerce website\pexels-the-glorious-studio-12026052.jpg"  alt="" width="200px">
+                    <div class="des">
+                        <span>Braslet</span>
+                        <h5>Men's Braslet Collection</h5>
+                       <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                       </div>
+                        <h4>₹13499</h4>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="pro">
+                    <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\website\1.(portfolio)ecommerce website\mens.jpg"  alt="" width="200px">
+                    <div class="des">
+                        <span> Braslet </span>
+                        <h5>Men's Braslet Collection</h5>
+                       <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                       </div>
+                        <h4>₹16999</h4>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+          
+            </div>
+        </section>
+        
+    
+        <div id="footerpage" >
+            <div class="col"></div>
+           <div class="logo"> 
+            <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\website\1.(portfolio)ecommerce website\GIVA-logo-black.png" height="50px" width="100px" alt="">
+           </div>
+            <div class="grid-container">
+                <div>
+                    <h4>Contact</h4>
+                    <p>Address:<strong></strong>Westend Mall, GFN-8B, 
+                        Ground Floor North, Nexus, Mahadji Shinde Rd,
+                         near Parihar Chowk,
+                         Harmony Society, Ward No. 8, Wireless Colony, Aundh, 
+                         Pune, Maharashtra 411007</p>
+                         <p>Phone:<strong></strong>-  7829558887</p>  
+                         <p>Hours:<strong></strong>- (10 AM to 6:30 PM)</p>  
+                         <h5>@2023, GIVA jewellery</h5>
+               </div>
+               
+                <div>
+                    <h3>GET HELP</h3>
+                    <p>  Order status </p>
+                    <p>Delivery</p>
+                    <p>Returns</p>
+                    <p>Payment options</p>
+                 
+                 </div>
+                <div>
+                  <h3>ABOUT US</h3>
+                  <p> Delivery Information</p>
+                    <p>Privacy Policy</p>
+                    <p>Terms & Conditions </p>
+                    <p>Contact Us</p>
+              </div>  
+                <div class="footer-images">
+                <div>
+                    <h4>Install App</h4>
+                    <p>From App Store or Google Play</p>
+                    <div>
+                    <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\website\1.(portfolio)ecommerce website\apple.jpeg" alt="" width="150px" >
+                </div>
+                <div>
+                    <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\website\1.(portfolio)ecommerce website\google.jpeg" alt="" width="150px"> 
+                
+                </div>
+                <p>Secured Payment Gateways</p>
+  <img src="C:\Users\Sayali\OneDrive\Desktop\3rd sem\website\1.(portfolio)ecommerce website\payment.png" alt="" width="150px">
+</div>
+<div class="copyright">
+
+</div>
+              
+        
+        
+        
+</body>
+</html>
